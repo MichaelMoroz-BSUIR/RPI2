@@ -1,0 +1,143 @@
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: thin solid #dfdfdf;
+  background-color: #fafafa;
+  color: #222222;
+  z-index: 9999;
+  box-sizing: border-box;
+  width: 350px;
+  height: 220px;
+  padding: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  text-align: center;
+}
+
+.-hidden {
+  display: none;
+}
+
+.top,
+.bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.notif-container {
+  box-sizing: border-box;
+  width: 295px;
+  height: 160px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: thin solid #000000;
+  padding: 5px;
+  margin: 0 0 25px 0;
+  display		: table;
+}
+
+.notif-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  display		: block;
+	
+  margin-bottom: 10px;
+}
+.notif-content {
+  font-size: 14px;
+  display		: block;
+}
+
+.close,
+.dismiss,
+.controls {
+  user-select: none;
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.close:hover {
+  color: #003ac2;
+  background-color: #ababab;
+  cursor:pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px #ababab;
+}
+
+.bottom {
+    max-height: 70px;
+}
+.top {
+  min-height: 165px;
+}
+
+.dismiss {
+  font-size: 16px;
+  color: #363636;
+}
+
+.dismiss:hover {
+  cursor:pointer;
+  
+}
+
+.prev, .next, .points-container, .point {
+  display: inline-block;
+}
+
+.prev, .next {
+  color: #363636;
+  font-size: 24px;
+  line-height: 25px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.prev:hover,
+.next:hover {
+  color: #003ac2;
+  background-color: #ababab;
+  cursor:pointer;
+  box-shadow: 0 0 2px 2px #ababab;
+}
+
+.points-container {
+  width:100px;
+  text-align:center;
+  font-size: 0;
+}
+
+.point {
+  color: #363636;
+  width: 12px;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.-current {
+  font-size: 35px;
+  color: #003ac2;
+}
