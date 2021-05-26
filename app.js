@@ -17,10 +17,10 @@ let notificationText = [
   '5 Excepteur sint occaecat cupidatat non proident, sunt in culpa'
 ];
 
-next.addEventListener('click', e => {toNextNotification()});
-prev.addEventListener('click', e => {toPreviousNotification()});
-close.addEventListener('click', e => {hideNotification();});
-dismiss.addEventListener('click', e => {populateStorage();});
+next.addEventListener('click', toNextNotification);
+prev.addEventListener('click', toPreviousNotification);
+close.addEventListener('click', hideNotification);
+dismiss.addEventListener('click', populateStorage);
 
 document.addEventListener('keyup', e => {
   if (e.keyCode === 27) {
@@ -62,17 +62,17 @@ function renderItems(index) {
 
 function renderPoints(index) {
   pointsContainer.innerHTML = notificationText
-  .map((item, k) => `<div class="point${k === index ? ' -current' : ''}">&#8226;</div>`)
+  .map((item, k) => `<div class="point${k === index ? ' current' : ''}">&#8226;</div>`)
   .join('\n');
 }
 
 function hideNotification() {
-  notification.classList.add('-hidden');
+  notification.classList.add('hidden');
   notification.innerHTML = '';
 }
 
 function showNotification() {
-  notification.classList.remove('-hidden');
+  notification.classList.remove('hidden');
 }
 
 function populateStorage() {
